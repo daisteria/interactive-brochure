@@ -1,0 +1,303 @@
+:root {
+    --dark-grey: #292A2E;
+    --yellow: #FCB615;
+}
+
+::selection {
+    background-color: var(--yellow);
+    color: var(--dark-grey);
+}
+
+html,
+body {
+    background-color: var(--dark-grey);
+}
+
+body,
+button {
+    color: #fff;
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+
+h1, h2, button {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+h2 {
+    color: var(--yellow);
+}
+
+p {
+    font-size: 16px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+ol {
+    list-style: decimal;
+}
+
+.btn {
+    font-size: 18px;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.navbar-inverse {
+    background-color: var(--dark-grey);
+}
+
+.bg-dark {
+    background-color: var(--dark-grey) !important;
+    color: #fff;
+    width: 100%;
+}
+
+.bg-light {
+    background-color: var(--dark-grey) !important;
+}
+
+.container.bg-dark,
+.container.bg-light {
+    margin-top: 20em;
+}
+
+/*progress*/
+.progress {
+    height: 10px;
+    background-color: var(--yellow);
+    border-radius: 0px;
+    transition: width 0.5s ease-in-out;
+}
+
+.progressBar {
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+    position: fixed;
+}
+
+/*navbar*/
+
+nav {
+    width: 65%;
+    font-size: 1.25em;
+    text-decoration: none;
+    background-color: var(--dark-grey);
+    padding-top: 30px;
+    transform: translateX(25%);
+    /*use transform instead of margin: 0 auto to make sure elements stay centered even when 
+    switching to a different sized screen*/
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    transition: 0.3s;
+    display: block;
+}
+
+.background {
+    background-color: var(--dark-grey);
+    width: 100%;
+    transform: translateX(0%);
+    text-align: center;
+}
+
+nav a img {
+    transition: transform 0.3s ease;
+}
+
+nav a img:hover {
+    transform: scale(1.1);
+}
+
+.primary-nav {
+    border-top: 2.5px solid #fff;
+    padding: 30px 5%;
+    text-align: center;
+}
+
+.primary-nav li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.primary-nav li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFF;
+    transition: transform 0.3s ease;
+}
+
+.primary-nav ul li:hover {
+    transform: scale(1.06);
+}
+
+.primary-nav ul li a:hover {
+    color: var(--yellow);
+}
+
+nav img {
+    height: 7rem;
+    display: block;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.myNav {
+    padding-bottom: 200rem;
+}
+
+.navbar-header {
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 100%;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 100%;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+
+    }
+}
+
+.heading-container {
+    display: inline-block;
+}
+
+.heading-yellow {
+    color: var(--yellow);
+}
+
+.btn-outline-primary {
+    color: #fff;
+    background-color: var(--y);
+    border-color: var(--yellow);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-primary:hover {
+    font-weight: 600;
+    color: var(--dark-grey);
+    background-color: var(--yellow);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-primary:active {
+    color: var(--dark-grey);
+    background-color: var(--yellow);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-clicked {
+    color: var(--dark-grey);
+    background-color: var(--yellow);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-grow {
+    transition: transform 0.3s ease;
+}
+
+.btn-grow:hover {
+    transform: scale(1.05);
+}
+
+/* home page features */
+
+#car-homepage {
+    width: 80%;
+}
+
+/* checkbox buttons + form */
+
+.container-yellow-border-top {
+    border-top: 2px solid var(--yellow);
+}
+
+.form-check {
+    border-bottom: 2px solid var(--yellow);
+}
+
+.custom-control-input {
+    width: 40px;
+    height: 50px;
+}
+
+.custom-control-label:hover, .custom-control-input:hover {
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+/* checkmark */
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 14px;
+    width: 10px;
+    height: 16px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#finalActionBtn {
+    color: #fff;
+}
+
+#finalActionBtn:hover {
+    color: var(--dark-grey);
+}
+
+.disabled-cursor {
+    cursor: not-allowed;
+}
+
+.container.bg-dark img {
+    width: 80%;
+}

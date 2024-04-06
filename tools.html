@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/imgs/tire_icon.jpg">
+    <title>Changing a Car Tire</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/fonts.min.css">
+    <link rel="stylesheet" href="/js/script.js">
+
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="progressBar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    <nav id="navbar">
+        <a href="index.html"><img src="imgs/white_car_above.svg" alt="site logo"></a>
+        <div class="primary-nav">
+            <ul>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="prep.html">Preparations</a></li>
+                <li><a href="raise.html">Raising Vehicle</a></li>
+                <li><a href="tires.html">Switching Tires</a></li>
+                <li><a href="lower.html">Lowering Vehicle</a></li>
+                <li><a href="checklist.html">Post-Checklist</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container bg-dark">
+        <div class="row">
+            <div class="container col-4">
+                <h1>Tools Required:</h1>
+                <div class="form-check pb-5 pt-5 pl-5 container-yellow-border-top">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input pl-5" id="customCheck1">
+                        <label class="custom-control-label pl-5" for="customCheck1">Cross lug nut wrench
+                            <img src="/imgs/wrench.png" class="custom-control-label">
+                        </label>
+
+                    </div>
+                </div>
+                <div class="form-check pb-5 pt-5 pl-5">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input pl-5" id="customCheck2">
+                        <label class="custom-control-label pl-5" for="customCheck2">Car jack
+                            <img src="/imgs/jack.png">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-check pb-5 pt-5 pl-5">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input pl-5" id="customCheck3">
+                        <label class="custom-control-label pl-5" for="customCheck3">Tire
+                            <img src="/imgs/tire.png">
+                        </label>
+                    </div>
+                </div>
+                <h2 class="pt-4">Optional:</h2>
+                <div class="form-check pb-5 pt-5 pl-5 container-yellow-border-top">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input pl-5" id="customCheck4">
+                        <label class="custom-control-label pl-5" for="customCheck4">Wheel wedges
+                            <img src="/imgs/wedges.png">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-check pb-5 pt-5 pl-5">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input pl-5" id="customCheck5">
+                        <label class="custom-control-label pl-5" for="customCheck5">Wooden block or sturdy
+                            material
+                            <img src="/imgs/wood.png">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="container w-100 col-7">
+                <div class="row">
+                    <div class="heading-container pr-1" style="color: #FFF;">
+                        <h1>When to</h1>
+                    </div>
+                    <div class="heading-container pl-1 heading-yellow">
+                        <h1>change a tire</h1>
+                    </div>
+                    <div class="mt-3">
+                        <p>Consider changing your tires if:</p>
+                        <ol>
+                            <li class="pl-3 pt-2 pb-2 ml-5">
+                                Flat Tire: If driving feels abnormally bumpy, or a tire is flat.
+                            </li>
+                            <li class="pl-3 pt-2 pb-2 ml-5">
+                                Temperature: If the weather is consistently below 7°C (45°F) or above 32°C (90°F).
+                            </li>
+                            <li class="pl-3 pt-2 pb-2 ml-5">
+                                Tread Wear: If your tread depth has worn down to 1.6mm (2/32 inch) or less.
+                            </li>
+                            <li class="pl-3 pt-2 pb-2 ml-5">
+                                Tire Age: Even if your tires have sufficient tread depth, consider replacing them if
+                                they are over 6 years old, regardless of wear.
+                            </li>
+                            <li class="pl-3 pt-2 pb-2 ml-5">
+                                Visible Damage: Inspect your tires for cuts, bulges, or other signs of damage.
+                            </li>
+                        </ol>
+                        <p class="mt-5 pb-4">To proceed to the car preparation stage, ensure that you have checked all
+                            the necessary tools to change a tire. You may choose to also select any optional tools that
+                            may help you in this procedure.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="/prep.html">
+                        <button class="btn btn-outline-primary" id="finalActionBtn" disabled>Proceed</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            var navbar = document.getElementById("navbar");
+            /*keep the navbar on the top of the screen when scrolling up*/
+            if (prevScrollpos > currentScrollPos) {
+                console.log(document.getElementById("navbar").style.top = "0");
+                /*add .background when scrolling up*/
+                console.log(navbar.classList.add('background'));
+            }
+            /*hide navbar off the screen when scrolling down*/
+            else {
+                console.log(document.getElementById("navbar").style.top = "-50%");
+            }
+            prevScrollpos = currentScrollPos;
+
+            /* Remove the .background when at the top of screen*/
+            if (currentScrollPos === 0) {
+                navbar.classList.remove('background')
+            }
+        };
+
+        function changeButton() {
+            var button = document.getElementById("myButton");
+            button.classList.add("btn-clicked");
+            button.innerHTML = "Clicked!";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("progress").style.width = "16.67%";
+        });
+
+        /* checkbox function */
+        // Function to check if all three checkboxes are checked
+        function areAllCheckboxesChecked() {
+            const checkbox1 = document.getElementById('customCheck1').checked;
+            const checkbox2 = document.getElementById('customCheck2').checked;
+            const checkbox3 = document.getElementById('customCheck3').checked;
+            return checkbox1 && checkbox2 && checkbox3;
+        }
+
+        // Function to update button status
+        function updateButtonStatus() {
+            const finalActionBtn = document.getElementById('finalActionBtn');
+            finalActionBtn.disabled = !areAllCheckboxesChecked();
+            finalActionBtn.classList.toggle('disabled-cursor', !areAllCheckboxesChecked());
+        }
+
+        // Add event listeners to checkboxes
+        document.querySelectorAll('.custom-control-input').forEach(item => {
+            item.addEventListener('change', updateButtonStatus);
+        });
+
+        // Initialize button status on page load
+        document.addEventListener("DOMContentLoaded", updateButtonStatus);
+
+    </script>
+</body>
+
+</html>

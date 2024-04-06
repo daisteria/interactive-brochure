@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/imgs/tire_icon.jpg">
+    <title>Changing a Car Tire</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/fonts.min.css">
+    <link rel="stylesheet" href="/js/script.js">
+
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="progressBar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    <nav id="navbar">
+        <a href="index.html"><img src="imgs/white_car_above.svg" alt="site logo"></a>
+        <div class="primary-nav">
+            <ul>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="prep.html">Preparations</a></li>
+                <li><a href="raise.html">Raising Vehicle</a></li>
+                <li><a href="tires.html">Switching Tires</a></li>
+                <li><a href="lower.html">Lowering Vehicle</a></li>
+                <li><a href="checklist.html">Post-Checklist</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container bg-dark">
+
+    </div>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            var navbar = document.getElementById("navbar");
+            /*keep the navbar on the top of the screen when scrolling up*/
+            if (prevScrollpos > currentScrollPos) {
+                console.log(document.getElementById("navbar").style.top = "0");
+                /*add .background when scrolling up*/
+                console.log(navbar.classList.add('background'));
+            }
+            /*hide navbar off the screen when scrolling down*/
+            else {
+                console.log(document.getElementById("navbar").style.top = "-50%");
+            }
+            prevScrollpos = currentScrollPos;
+
+            /* Remove the .background when at the top of screen*/
+            if (currentScrollPos === 0) {
+                navbar.classList.remove('background')
+            }
+        };
+
+        function changeButton() {
+            var button = document.getElementById("myButton");
+            button.classList.add("btn-clicked");
+            button.innerHTML = "Clicked!";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("progress").style.width = "50%";
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/imgs/tire_icon.jpg">
+    <title>Changing a Car Tire</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/fonts.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="index.html"><img src="imgs/white_car_above.svg" alt="site logo"></a>
+            <div class="primary-nav">
+                <ul>
+                    <li><a href = "tools.html">Tools</a></li>
+                    <li><a href = "prep.html">Preparations</a></li>
+                    <li><a href = "raise.html">Raising Vehicle</a></li>
+                    <li><a href = "tires.html">Switching Tires</a></li>
+                    <li><a href = "lower.html">Lowering Vehicle</a></li>
+                    <li><a href = "checklist.html">Post-Checklist</a></li>
+                </ul>
+        </div>
+    </nav>
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="container pt-5 pb-5 pl-4 w-100 col-4">
+                <div class="heading-container pr-1">
+                    <h1>How to</h1>
+                </div>
+                <div class="heading-container pl-1 heading-yellow" >
+                    <h1>change a tire</h1>
+                </div>
+                <h3 class="pb-5">A manual for replacing a flat tire, or for changing seasonal tires.</h3>
+                <a href="tools.html">
+                    <button class="btn btn-outline-primary btn-grow shadow mb-5" onclick="changeButton()">Open Manual</button>
+                </a>
+            </div>
+            <div class="container pt-5 pb-5 w-100 col-6">
+                <img src="/imgs/car.png" id="car-homepage">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        var navbar = document.getElementById("navbar");
+        /*keep the navbar on the top of the screen when scrolling up*/
+        if (prevScrollpos > currentScrollPos) {
+            console.log(document.getElementById("navbar").style.top = "0");
+        /*add .background when scrolling up*/
+            console.log(navbar.classList.add('background'));
+        } 
+         /*hide navbar off the screen when scrolling down*/
+        else {
+            console.log(document.getElementById("navbar").style.top = "-50%");
+        }
+        prevScrollpos = currentScrollPos;
+        
+        /* Remove the .background when at the top of screen*/
+        if (currentScrollPos === 0) {
+            navbar.classList.remove('background')
+        }
+        };
+
+        function changeButton() {
+            var button = document.getElementById("myButton");
+            button.classList.add("btn-clicked");
+            button.innerHTML = "Clicked!";
+        }
+    </script>
+</body>
+</html>
