@@ -36,6 +36,20 @@
 
     </div>
 
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <button type="button" class="btn btn-primary" onclick="toggleExpand('philippinesCard')">See More</button>
+                <div class="card collapse" id="philippinesCard">
+                    <div class="card-body">
+                        <p>This is the expanded content for the Philippines landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
 
     <script>
         var prevScrollpos = window.pageYOffset;
@@ -69,6 +83,13 @@
         document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("progress").style.width = "83.35%";
         });
+
+    //allows for the see more button to expand the card
+    function toggleExpand(contentId, button) {
+    var expandableContent = document.getElementById(contentId);
+    // makses it so the button will only expand the corresponding card
+    expandableContent.classList.toggle('expanded');
+    }
     </script>
 </body>
 
