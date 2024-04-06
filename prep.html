@@ -14,7 +14,7 @@
 
 <body>
     <div class="d-flex">
-        <div class="progressBar">
+        <div class="progressBar shadow">
             <div class="progress" id="progress"></div>
         </div>
     </div>
@@ -32,11 +32,74 @@
         </div>
     </nav>
 
-    <div class="container bg-dark">
-
+    <div class="container bg-yellow">
+        <div class="row">
+            <div class="container col-12 pt-5 d-flex align-items-center justify-content-center">
+                <h1 class="text-dark">Preparations</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-12 pt-3 pb-5 d-flex align-items-center justify-content-center">
+                <h3 class="text-dark">Setting up the vehicle for a tire change.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 bg-yellow-porsche d-flex align-items-center justify-content-center">
+                <div class="overlay-container">
+                    <div class="row w-100 mb-5 pb-5">
+                        <div class="container col-4 pl-5">
+                            <h2 class="text-dark mb-3">1. Move car to safe and even ground.</h2>
+                            <p class="text-dark">If you are changing a tire near oncoming traffic, move
+                                the car onto a wide shoulder of the road. Turn the car's hazard lights on.
+                            </p>
+                            <p class="text-dark">Park the car on level ground if able to prevent the car
+                                from rolling when changing tires.
+                            </p>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="container col-4 pr-5 text-right">
+                            <h2 class="text-dark mb-3">2. Apply parking brakes.</h2>
+                            <p class="text-dark">First shift the car into neutral, and slowly let go of
+                                the brake. This may cause the car to roll forwards or backwards depending
+                                on the level of the ground.
+                            </p>
+                            <p class="text-dark">Then, slowly raise the parking brake until the car comes
+                                to a full stop. This will reduce the strain of the transmission on the
+                                wheels, preventing the car from rolling when in park on uneven ground.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row m-3 p-3"></div>
+                    <div class="row w-100 mt-5 pt-5">
+                        <div class="container col-4 pl-5">
+                            <h2 class="text-dark mb-3">3. (Optional): Add wheel wedges.</h2>
+                            <p class="text-dark">If you have wheel wedges, insert them at the opposite
+                                ends of the car where the tire is being changed.
+                            </p>
+                            <p class="text-dark">For example, if you are changing a rear tire, place
+                                the wheel wedges behind the two tires at the front of the vehicle, and
+                                vice versa.
+                            </p>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="container col-4 pr-5 text-right">
+                            <h2 class="text-dark mb-3">4. Remove hubcaps.</h2>
+                            <p class="text-dark">If your car tire has hubcaps, or a cover on the wheel
+                                rim that covers the lug nuts, remove it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-12 mt-5 mb-5 pt-5 pb-5 d-flex align-items-center justify-content-center">
+                <a href="/raise.html">
+                    <button class="btn btn-outline-secondary btn-grow">Continue</button>
+                </a>
+            </div>
+        </div>
     </div>
-
-
 
     <script>
         var prevScrollpos = window.pageYOffset;
@@ -67,8 +130,8 @@
             button.innerHTML = "Clicked!";
         }
 
-        document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("progress").style.width = "33.34%";
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("progress").style.width = "33.34%";
         });
     </script>
 </body>

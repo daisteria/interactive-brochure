@@ -80,8 +80,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-1"></div>
-            <div class="container w-100 col-7">
+            <div class="col-1 container-yellow-border-right"></div>
+            <div class="container w-100 col-6">
                 <div class="row">
                     <div class="heading-container pr-1" style="color: #FFF;">
                         <h1>When to</h1>
@@ -117,7 +117,9 @@
                 </div>
                 <div class="row">
                     <a href="/prep.html">
-                        <button class="btn btn-outline-primary" id="finalActionBtn" disabled>Proceed</button>
+                        <button class="btn btn-outline-primary btn-grow" id="finalActionBtn" data-toggle="tooltip"
+                            data-placement="bottom" title="Check the required tools on the left."
+                            disabled>Proceed</button>
                     </a>
                 </div>
             </div>
@@ -171,6 +173,13 @@
             const finalActionBtn = document.getElementById('finalActionBtn');
             finalActionBtn.disabled = !areAllCheckboxesChecked();
             finalActionBtn.classList.toggle('disabled-cursor', !areAllCheckboxesChecked());
+
+            // Remove tooltip attributes if button is enabled
+            if (!finalActionBtn.disabled) {
+                finalActionBtn.removeAttribute('data-toggle');
+                finalActionBtn.removeAttribute('data-placement');
+                finalActionBtn.removeAttribute('title');
+            }
         }
 
         // Add event listeners to checkboxes

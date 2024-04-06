@@ -19,7 +19,9 @@ button {
     font-family: 'Proxima Nova', Georgia, sans-serif;
 }
 
-h1, h2, button {
+h1,
+h2,
+button {
     text-transform: uppercase;
     font-weight: bolder;
 }
@@ -29,7 +31,11 @@ h2 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
+}
+
+.text-dark {
+    color: var(--dark-grey);
 }
 
 label {
@@ -42,8 +48,18 @@ ol {
     list-style: decimal;
 }
 
+button:focus {
+    outline: none;
+}
+
 .btn {
     font-size: 18px;
+    font-weight: 600;
+    padding: 15%;
+}
+
+#button-home {
+    padding: 2.5%;
 }
 
 .btn:disabled {
@@ -54,19 +70,24 @@ ol {
     background-color: var(--dark-grey);
 }
 
+.bg-yellow {
+    background-color: #FBA316 !important;
+}
+
 .bg-dark {
     background-color: var(--dark-grey) !important;
     color: #fff;
-    width: 100%;
 }
 
 .bg-light {
-    background-color: var(--dark-grey) !important;
+    background-color: #fff !important;
 }
 
 .container.bg-dark,
-.container.bg-light {
+.container.bg-light,
+.container.bg-yellow {
     margin-top: 20em;
+    width: 100%;
 }
 
 /*progress*/
@@ -155,10 +176,12 @@ nav img {
     padding-bottom: 200rem;
 }
 
+/*
 .navbar-header {
     align-items: center;
     justify-content: center;
 }
+*/
 
 @media (min-width: 576px) {
     .container {
@@ -198,7 +221,6 @@ nav img {
 
 .btn-outline-primary {
     color: #fff;
-    background-color: var(--y);
     border-color: var(--yellow);
     border-radius: 16px;
     border-width: 4px;
@@ -216,6 +238,30 @@ nav img {
 .btn-outline-primary:active {
     color: var(--dark-grey);
     background-color: var(--yellow);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-secondary {
+    color: var(--dark-grey);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-secondary:hover {
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--dark-grey);
+    border-color: var(--dark-grey);
+    border-radius: 16px;
+    border-width: 4px;
+}
+
+.btn-outline-secondary:active {
+    color: var(--dark-grey);
+    background-color: var(--dark-grey);
     border-color: var(--dark-grey);
     border-radius: 16px;
     border-width: 4px;
@@ -249,6 +295,10 @@ nav img {
     border-top: 2px solid var(--yellow);
 }
 
+.container-yellow-border-right {
+    border-right: 2px solid var(--yellow);
+}
+
 .form-check {
     border-bottom: 2px solid var(--yellow);
 }
@@ -258,7 +308,8 @@ nav img {
     height: 50px;
 }
 
-.custom-control-label:hover, .custom-control-input:hover {
+.custom-control-label:hover,
+.custom-control-input:hover {
     cursor: pointer;
 }
 
@@ -301,3 +352,25 @@ nav img {
 .container.bg-dark img {
     width: 80%;
 }
+
+/* prep.html features */
+
+.bg-yellow-porsche {
+    background-image: url("/imgs/yellow_porsche_above.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    min-height: 720px;
+    z-index: 1;
+    padding-top: 35%;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
