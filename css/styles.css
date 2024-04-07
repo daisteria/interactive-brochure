@@ -421,16 +421,20 @@ nav img {
     height: 20rem;
 }
 
-
-
 .card #nutsExpand {
-    height: 40vh;
     padding: 0;
 }
 
+.card #nutsExpand p:first-child {
+    padding-top: 40%;
+}
+
 .card #jackExpand, .card #raiseExpand {
-    height: 25vh;
     padding: 0;
+}
+
+.card #jackExpand p:first-child, .card #raiseExpand p:first-child {
+    padding-top: 40%;
 }
 
 .half-transparent {
@@ -438,7 +442,7 @@ nav img {
     border: 1px solid ;
 }
 
-.stackMenu .col-12 {
+.stackMenu .col-12, .dropDown .col-12 {
     width: 30rem;
 }
 
@@ -465,35 +469,6 @@ nav img {
     border-color: var(--dark-grey);
 }
 
-/*
-@media (min-width: 576px) {
-    .card #nutsExpand {
-        height: 80vh;
-
-    }
-}
-
-@media (min-width: 768px) {
-    .card #nutsExpand {
-        height: 80vh;
-        width: 100%;
-    }
-}
-
-@media (min-width: 992px) {
-    .card #nutsExpand {
-        height: 100vh;
-    }
-}
-
-@media (min-width: 1200px) {
-    .card #nutsExpand {
-        height: 60vh;
-    }
-}
-*/
-
-.spacer {
-    padding-bottom: 20px;
-    padding-top: 20px;
+.dropDown .btn {
+    font-size: 22px;
 }

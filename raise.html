@@ -52,7 +52,7 @@
 
         <div class="row align-items-center justify-content-center">
             <div class="col-md-6 d-flex justify-content-center">
-                <img src="imgs/jacked_car_wf.jpg" style="transform: scale(80%);">
+                <img src="imgs/car_jack_behind.jpg" style="transform: scale(80%);">
             </div>
 
             <div class = "col-md-6">
@@ -61,8 +61,8 @@
                           <div class="card mb-3">
                             <button class="btn btn-primary w-100" onclick="toggleExpand('nutsExpand')">5. Loosen lug nuts</button>                    
                             <div class="collapse" id="nutsExpand">
-                                <div class="card-body text-center">
-                                <p class="text-dark pt-3">
+                                <div class="card-body d-flex flex-column text-center justify-content-center">
+                                <p class="text-dark">
                                     Use the wrench to loosen the lug nuts in a star pattern. Do not
                                     remove the lug nuts entirely, as this may cause the vehicle to
                                     become unstable and inflict harm.
@@ -71,9 +71,12 @@
                                     lock wheel lug nut key to remove this. You may find this in a location
                                     relative to the spare tire tools in the trunk of your car.
                                 </p>
-                                <p class="text-dark lastPara" >If your car uses a lock wheel lug nut and you do not have access
+                                <p class="text-dark" >If your car uses a lock wheel lug nut and you do not have access
                                     to the corresponding lock wheel lug nut key, call your mechanic for assistance.
                                 </p>
+                                </div>
+                                <div class="spacer">
+                                    
                                 </div>
                         </div>
                     
@@ -85,7 +88,7 @@
                             <button class="btn btn-primary w-100" onclick="toggleExpand('jackExpand')">6. Place jack under vehicle</button>
                             <div class="collapse" id="jackExpand">
                                 <div class="card-body text-center">
-                                <p class="text-dark pt-3">
+                                <p class="text-dark">
                                     Locate the metal ridge of your vehicle body frame closest to the tire
                                     being replaced. If you are having trouble, seek assistance from the
                                     car owner manual.
@@ -107,7 +110,7 @@
                             <div class="collapse" id="raiseExpand">
                                 <div class="card-body text-center">
         
-                                <p class="text-dark pt-3">
+                                <p class="text-dark">
                                     Slowly, raise the vehicle with the car jack until the tire is completely off 
                                     the ground by at least a few centimeters (~1cm to 3cm is sufficient).
                                 </p>
@@ -154,7 +157,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("progress").style.width = "83.35%";
+        document.getElementById("progress").style.width = "50.01%";
         });
 
         function toggleExpand(elementId) {

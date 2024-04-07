@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imgs/tire_icon.jpg">
+    <title>Changing a Car Tire</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.min.css">
+    <link rel="stylesheet" href="js/script.js">
+
+</head>
+
+<body>
+    <div class="d-flex">
+        <div class="progressBar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+    <nav id="navbar">
+        <a href="index.html"><img src="imgs/white_car_above.svg" alt="site logo"></a>
+        <div class="primary-nav">
+            <ul>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="prep.html">Preparations</a></li>
+                <li><a href="raise.html">Raising Vehicle</a></li>
+                <li><a href="tires.html">Switching Tires</a></li>
+                <li><a href="lower.html">Lowering Vehicle</a></li>
+                <li><a href="checklist.html">Post-Checklist</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container bg-dark">
+        <div class="row">
+            <div class="container col-12 d-flex align-items-center justify-content-center">
+                <h1>Success!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-12 mt-2 d-flex align-items-center justify-content-center">
+                <h3 class="heading-yellow">You have completed the 'How to Change a Tire' manual.</h3>
+            </div>
+        </div>
+        <div class="row mt-5 pt-5 d-flex align-items-center justify-content-center">
+            <a href="index.html" class="pr-4">
+                <button class="btn btn-outline-primary btn-grow">Return</button>
+            </a>
+        </div>
+    </div>
+
+    <audio autoplay id="soundEffect">
+        <source src="assets/correct-2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const soundEffect = document.getElementById('soundEffect');
+            soundEffect.play();
+        });
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            var navbar = document.getElementById("navbar");
+            /*keep the navbar on the top of the screen when scrolling up*/
+            if (prevScrollpos > currentScrollPos) {
+                console.log(document.getElementById("navbar").style.top = "0");
+                /*add .background when scrolling up*/
+                console.log(navbar.classList.add('background'));
+            }
+            /*hide navbar off the screen when scrolling down*/
+            else {
+                console.log(document.getElementById("navbar").style.top = "-50%");
+            }
+            prevScrollpos = currentScrollPos;
+
+            /* Remove the .background when at the top of screen*/
+            if (currentScrollPos === 0) {
+                navbar.classList.remove('background')
+            }
+        };
+
+        function changeButton() {
+            var button = document.getElementById("myButton");
+            button.classList.add("btn-clicked");
+            button.innerHTML = "Clicked!";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("progress").style.width = "100%";
+        });
+
+        /* checkbox function */
+        // Function to check if all three checkboxes are checked
+        function areAllCheckboxesChecked() {
+            const checkbox1 = document.getElementById('customCheck1').checked;
+            const checkbox2 = document.getElementById('customCheck2').checked;
+            const checkbox3 = document.getElementById('customCheck3').checked;
+            return checkbox1 && checkbox2 && checkbox3;
+        }
+
+        // Function to update button status
+        function updateButtonStatus() {
+            const finishBtn = document.getElementById('finishBtn');
+            finishBtn.disabled = !areAllCheckboxesChecked();
+            finishBtn.classList.toggle('disabled-cursor', !areAllCheckboxesChecked());
+
+            // Remove tooltip attributes if button is enabled
+            if (!finishBtn.disabled) {
+                finishBtn.removeAttribute('data-toggle');
+                finishBtn.removeAttribute('data-placement');
+                finishBtn.removeAttribute('title');
+            }
+        }
+
+        // Add event listeners to checkboxes
+        document.querySelectorAll('.custom-control-input').forEach(item => {
+            item.addEventListener('change', updateButtonStatus);
+        });
+
+        // Initialize button status on page load
+        document.addEventListener("DOMContentLoaded", updateButtonStatus);
+    </script>
+</body>
+
+</html>
