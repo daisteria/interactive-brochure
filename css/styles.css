@@ -55,10 +55,6 @@ ol {
     list-style: decimal;
 }
 
-button:focus {
-    outline: none;
-}
-
 .btn {
     font-size: 18px;
     font-weight: 600;
@@ -238,7 +234,7 @@ nav img {
     border-width: 4px;
 }
 
-.btn-outline-primary:hover {
+.btn-outline-primary:hover, .btn-outline-primary:focus {
     font-weight: 600;
     color: var(--dark-grey);
     background-color: var(--yellow);
@@ -262,7 +258,7 @@ nav img {
     border-width: 4px;
 }
 
-.btn-outline-secondary:hover {
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
     font-weight: 600;
     color: #fff;
     background-color: var(--dark-grey);
@@ -467,6 +463,11 @@ nav img {
 .stackMenu .btn {
     background-color: var(--dark-grey);
     border-color: var(--dark-grey);
+}
+
+.stackMenu .btn:hover {
+    background-color: var(--yellow);
+    color: var(--dark-grey);
 }
 
 .dropDown .btn {
