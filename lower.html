@@ -31,7 +31,7 @@
             </ul>
         </div>
     </nav>
-    
+
     <div class="container bg-light">
         <div class="row">
             <div class="container col-12 pt-5 d-flex align-items-center justify-content-center">
@@ -49,21 +49,21 @@
             </div>
         </div>
 
-        
+
         <div class="row d-flex align-items-center justify-content-center">
             <div class="col-1"></div>
             <div class="col-auto mr-5">
                 <img src="imgs/jacked_car_wf.jpg" style="transform: scale(80%);">
             </div>
             <div class="col-1"></div>
-            <div class = "container mt-5 mb-5 dropDown">
-                <div class = "row">
-                    <div class = "col-lg-4">
-                          <div class="card">
+            <div class="container mt-5 mb-5 dropDown">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
                             <div class="card-header">
                                 <h2 class="mb-0 text-dark">11. Lower vehicle </h2>
                             </div>
-                                <div class="card-body text-center">
+                            <div class="card-body text-center">
                                 <p class="text-dark">
                                     Lower the car with the car jack until the tire touches the ground.
                                 </p>
@@ -71,94 +71,100 @@
                                     weight on the newly replaced tire, as the lug nuts are not securely
                                     fastened and might cause the car to collapse on that side.
                                 </p>
-                                </div>
+                            </div>
                         </div>
-                      </div>
-            
-                    <div class = "col-lg-4">
+                    </div>
+
+                    <div class="col-lg-4">
                         <div class="card">
-                          <div class="card-header">
-                              <h2 class="mb-0 text-dark">12. Tighten lugnuts </h2>
-                          </div>
-                              <div class="card-body text-center">
+                            <div class="card-header">
+                                <h2 class="mb-0 text-dark">12. Tighten lug nuts </h2>
+                            </div>
+                            <div class="card-body text-center">
                                 <p class="text-dark">
                                     Using the cross lug nut wrench, tighten the lug nuts in a star pattern.
                                 </p>
                             </div>
                         </div>
-                      </div>
-                    
-            
-                    <div class = "col-lg-4">
+                    </div>
+
+
+                    <div class="col-lg-4">
                         <div class="card">
-                          <div class="card-header">
-                              <h2 class="mb-0 text-dark">13. Remove jack </h2>
-                          </div>
-                              <div class="card-body text-center">
-        
+                            <div class="card-header">
+                                <h2 class="mb-0 text-dark">13. Remove jack </h2>
+                            </div>
+                            <div class="card-body text-center">
+
                                 <p class="text-dark">
                                     Once the lug nuts are securely tightened, lower the car to the ground
                                     completely and remove the car jack.
                                 </p>
                                 <p class="text-dark">
                                     Ensure that the tire is correctly aligned with the frame of the vehicle
-                                    and that there are no issues with the substitute tire. 
+                                    and that there are no issues with the substitute tire.
                                 </p>
                             </div>
                         </div>
-                      </div>
                     </div>
                 </div>
-
-    </div>
-            </div>
             </div>
         </div>
-            
-            
-        
-            <script>
-                var prevScrollpos = window.pageYOffset;
-                window.onscroll = function () {
-                    var currentScrollPos = window.pageYOffset;
-                    var navbar = document.getElementById("navbar");
-                    /*keep the navbar on the top of the screen when scrolling up*/
-                    if (prevScrollpos > currentScrollPos) {
-                        console.log(document.getElementById("navbar").style.top = "0");
-                        /*add .background when scrolling up*/
-                        console.log(navbar.classList.add('background'));
-                    }
-                    /*hide navbar off the screen when scrolling down*/
-                    else {
-                        console.log(document.getElementById("navbar").style.top = "-50%");
-                    }
-                    prevScrollpos = currentScrollPos;
-        
-                    /* Remove the .background when at the top of screen*/
-                    if (currentScrollPos === 0) {
-                        navbar.classList.remove('background')
-                    }
-                };
-        
-                function changeButton() {
-                    var button = document.getElementById("myButton");
-                    button.classList.add("btn-clicked");
-                    button.innerHTML = "Clicked!";
-                }
-        
-                document.addEventListener("DOMContentLoaded", function() {
-                document.getElementById("progress").style.width = "83.35%";
-                });
-        
-                function toggleExpand(elementId) {
-                const element = document.getElementById(elementId);
-                if (element.classList.contains('show')) {
-                    element.classList.remove('show');
-                } else {
-                    element.classList.add('show');
-                }
+        <div class="row">
+            <div class="container col-12 mb-5 d-flex align-items-center justify-content-center">
+                <a href="raise.html">
+                    <button class="btn btn-outline-secondary btn-grow">Continue</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            var navbar = document.getElementById("navbar");
+            /*keep the navbar on the top of the screen when scrolling up*/
+            if (prevScrollpos > currentScrollPos) {
+                console.log(document.getElementById("navbar").style.top = "0");
+                /*add .background when scrolling up*/
+                console.log(navbar.classList.add('background'));
             }
-            </script>
-        </body>
-        
-        </html>
+            /*hide navbar off the screen when scrolling down*/
+            else {
+                console.log(document.getElementById("navbar").style.top = "-50%");
+            }
+            prevScrollpos = currentScrollPos;
+
+            /* Remove the .background when at the top of screen*/
+            if (currentScrollPos === 0) {
+                navbar.classList.remove('background')
+            }
+        };
+
+        function changeButton() {
+            var button = document.getElementById("myButton");
+            button.classList.add("btn-clicked");
+            button.innerHTML = "Clicked!";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("progress").style.width = "83.35%";
+        });
+
+        function toggleExpand(elementId) {
+            const element = document.getElementById(elementId);
+            if (element.classList.contains('show')) {
+                element.classList.remove('show');
+            } else {
+                element.classList.add('show');
+            }
+        }
+    </script>
+</body>
+
+</html>
