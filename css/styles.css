@@ -349,6 +349,10 @@ nav img {
     transform: rotate(45deg);
 }
 
+.checklist-info {
+    margin: 0;
+}
+
 #finalActionBtn {
     color: #fff;
 }
@@ -422,8 +426,13 @@ nav img {
     max-height: 100rem;
 }
 
-.card #nutsExpand, .card #jackExpand, .card #raiseExpand {
-    height: 1rem;
+.card #nutsExpand {
+    height: 24rem;
+    padding: 0;
+}
+
+.card #jackExpand, .card #raiseExpand {
+    height: 20rem;
     padding: 0;
 }
 
@@ -432,3 +441,10 @@ nav img {
     border: 1px solid ;
 }
 
+.dropDown .col-12 {
+    width: 30rem;
+}
+
+.dropDown {
+    padding-left: 20rem;
+}
