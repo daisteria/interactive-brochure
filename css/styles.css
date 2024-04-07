@@ -28,6 +28,13 @@ button {
 
 h2 {
     color: var(--yellow);
+    font-size: 32px;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 64px;
 }
 
 p {
@@ -74,6 +81,10 @@ button:focus {
     background-color: #FBA316 !important;
 }
 
+.bg-black {
+    background-color: #000 !important;
+}
+
 .bg-dark {
     background-color: var(--dark-grey) !important;
     color: #fff;
@@ -85,7 +96,8 @@ button:focus {
 
 .container.bg-dark,
 .container.bg-light,
-.container.bg-yellow {
+.container.bg-yellow,
+.container.bg-black {
     margin-top: 20em;
     width: 100%;
 }
@@ -299,7 +311,7 @@ nav img {
     border-right: 2px solid var(--yellow);
 }
 
-.form-check {
+.container-yellow-border-bottom {
     border-bottom: 2px solid var(--yellow);
 }
 
@@ -353,10 +365,19 @@ nav img {
     width: 80%;
 }
 
-/* prep.html features */
-
 .bg-yellow-porsche {
     background-image: url("/imgs/yellow_porsche_above.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    min-height: 720px;
+    z-index: 1;
+    padding-top: 35%;
+}
+
+.bg-white-porsche {
+    background-image: url("/imgs/white_porsche.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -372,5 +393,42 @@ nav img {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#beamer-gif {
+    max-width: 100%;
+}
+
+/* tires.html features */
+
+.bg-beamer-gif {
+    background-image: url("/imgs/beamer.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-height: 1080px;
+    z-index: 1;
+    padding-top: 35%;
+}
+
+.card-expand {
+    max-height: 20rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    height: 20rem;
+}
+
+.expanded {
+    max-height: 100rem;
+}
+
+.card #nutsExpand, .card #jackExpand, .card #raiseExpand {
+    height: 1rem;
+    padding: 0;
+}
+
+.half-transparent {
+    background-color: rgba(000, 000, 000, 0.9);
+    border: 1px solid ;
 }
 
