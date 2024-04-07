@@ -370,7 +370,7 @@ nav img {
 }
 
 .bg-yellow-porsche {
-    background-image: url("/imgs/yellow_porsche_above.jpg");
+    background-image: url("../imgs/yellow_porsche_above.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -381,7 +381,7 @@ nav img {
 }
 
 .bg-white-porsche {
-    background-image: url("/imgs/white_porsche.jpg");
+    background-image: url("../imgs/white_porsche.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -406,7 +406,7 @@ nav img {
 /* tires.html features */
 
 .bg-beamer-gif {
-    background-image: url("/imgs/beamer.gif");
+    background-image: url("../imgs/beamer.gif");
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 100%;
@@ -416,23 +416,20 @@ nav img {
 }
 
 .card-expand {
-    max-height: 20rem;
     overflow: hidden;
     transition: max-height 0.3s ease;
     height: 20rem;
 }
 
-.expanded {
-    max-height: 100rem;
-}
+
 
 .card #nutsExpand {
-    height: 24rem;
+    height: 40vh;
     padding: 0;
 }
 
 .card #jackExpand, .card #raiseExpand {
-    height: 20rem;
+    height: 25vh;
     padding: 0;
 }
 
@@ -441,10 +438,62 @@ nav img {
     border: 1px solid ;
 }
 
-.dropDown .col-12 {
+.stackMenu .col-12 {
     width: 30rem;
 }
 
-.dropDown {
+.card-body {
+    margin-bottom: 12rem;
+}
+
+.stackMenu {
     padding-left: 20rem;
+}
+
+#finishBtn {
+    padding: 0;
+    padding: 18%;
+    color: #fff;
+}
+
+#finishBtn:hover {
+    color: var(--dark-grey);
+}
+
+.stackMenu .btn {
+    background-color: var(--dark-grey);
+    border-color: var(--dark-grey);
+}
+
+/*
+@media (min-width: 576px) {
+    .card #nutsExpand {
+        height: 80vh;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .card #nutsExpand {
+        height: 80vh;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .card #nutsExpand {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card #nutsExpand {
+        height: 60vh;
+    }
+}
+*/
+
+.spacer {
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
